@@ -6,6 +6,18 @@ This project demonstrates this flow locally:
 Code push -> Jenkins builds Docker image -> deploys container locally -> Prometheus scrapes metrics -> Grafana visualizes
 ```
 
+## Application
+
+![App](./images/app-metrics.png)
+
+The Node.js application running on port 3000 with endpoints for health checks, work simulation, and metrics exposure for Prometheus monitoring.
+
+## Running Containers
+
+![Running Containers](./images/02-docker-container.png)
+
+All four services running together - Node.js application, Prometheus, Grafana, and Jenkins containers with their respective ports exposed and interconnected through Docker Compose network.
+
 ## Project Structure
 
 ```text
@@ -47,6 +59,18 @@ password: admin
 ```
 
 The dashboard is provisioned automatically under `Local Demo / Node App Monitoring`.
+
+## Prometheus
+
+![Prometheus](./images/03-prometheus.png)
+
+Prometheus time-series database interface for querying and analyzing scraped metrics, showing target health and metric exploration capabilities.
+
+## Grafana
+
+![Grafana](./images/04-grafana.png)
+
+Real-time monitoring dashboard displaying HTTP request metrics, response times, request counters, and system health indicators automatically provisioned for the Node.js application.
 
 Generate sample traffic so the dashboard has data:
 
