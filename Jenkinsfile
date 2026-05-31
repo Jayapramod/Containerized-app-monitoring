@@ -4,12 +4,13 @@ pipeline {
   environment {
     APP_IMAGE = 'local-devops-monitoring-demo:latest'
     COMPOSE_PROJECT_NAME = 'local-devops-demo'
+    GITHUB_REPO = 'https://github.com/Jayapramod/Containerized-app-monitoring.git'
   }
 
   stages {
     stage('Checkout') {
       steps {
-        checkout scm
+        git branch: 'main', url: '${GITHUB_REPO}'
       }
     }
 
