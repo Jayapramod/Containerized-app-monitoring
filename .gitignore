@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+
+# Docker volumes
+jenkins-home/
+grafana-storage/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
