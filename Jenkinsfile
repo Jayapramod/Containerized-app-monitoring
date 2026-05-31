@@ -28,6 +28,7 @@ pipeline {
 
     stage('Deploy Locally') {
       steps {
+        sh 'docker compose down --remove-orphans || true'
         sh 'docker compose up -d app prometheus grafana'
       }
     }
