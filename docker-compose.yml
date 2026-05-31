@@ -53,6 +53,8 @@ services:
       - jenkins-home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - .:/workspace
+      # ✅ THIS IS THE KEY FIX — mount host project dir into Jenkins workspace path
+      - .:/var/lib/jenkins/workspace/hcl assignment
     restart: unless-stopped
 
 volumes:

@@ -28,7 +28,8 @@ pipeline {
 
     stage('Deploy Locally') {
       steps {
-        sh 'docker compose down --remove-orphans || true'
+        sh 'docker rm -f demo-node-app demo-prometheus demo-grafana demo-jenkins || true'
+        sh 'docker compose down -v --remove-orphans || true'
         sh 'docker compose up -d app prometheus grafana'
       }
     }
