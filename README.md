@@ -14,7 +14,7 @@ The Node.js application running on port 3000 with endpoints for health checks, w
 
 ## Running Containers
 
-![Running Containers](./images/02-docker-container.png)
+![Running Containers](./images/docker-container.png)
 
 All four services running together - Node.js application, Prometheus, Grafana, and Jenkins containers with their respective ports exposed and interconnected through Docker Compose network.
 
@@ -62,13 +62,13 @@ The dashboard is provisioned automatically under `Local Demo / Node App Monitori
 
 ## Prometheus
 
-![Prometheus](./images/03-prometheus.png)
+![Prometheus](./images/prometheus.png)
 
 Prometheus time-series database interface for querying and analyzing scraped metrics, showing target health and metric exploration capabilities.
 
 ## Grafana
 
-![Grafana](./images/04-grafana.png)
+![Grafana](./images/grafana.png)
 
 Real-time monitoring dashboard displaying HTTP request metrics, response times, request counters, and system health indicators automatically provisioned for the Node.js application.
 
